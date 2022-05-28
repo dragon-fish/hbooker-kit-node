@@ -1,49 +1,34 @@
-type StrNumBoolean = '0' | '1'
+import { AxiosInstance } from 'axios'
+import { BookRoute } from './Book'
+import { SelfAccountInfo } from './Reader'
 
-export interface HBookUser {
-  login_token: string
-  user_code: string
-  reader_info: {
-    reader_id: `${number}`
-    account: `书客${number}`
-    is_bind: StrNumBoolean
-    is_bind_qq: StrNumBoolean
-    is_bind_weixin: StrNumBoolean
-    is_bind_huawei: StrNumBoolean
-    is_bind_apple: StrNumBoolean
-    phone_num: `${number}`
-    phone_crypto: string
-    mobileVal: StrNumBoolean
-    email: string
-    license: string
-    reader_name: string
-    avatar_url: string
-    avatar_thumb_url: string
-    base_status: StrNumBoolean
-    exp_lv: `${number}`
-    exp_value: `${number}`
-    gender: '0' | '1' | '2'
-    vip_lv: `${number}`
-    vip_value: `${number}`
-    is_author: StrNumBoolean
-    book_age: `${number}`
-    category_prefer: string[]
-    used_decoration: any[]
-    rank: `${number}`
-    ctime: string
-  }
-  prop_info: {
-    rest_gift_hlb: `${number}`
-    rest_hlb: `${number}`
-    rest_yp: `${number}`
-    rest_recommend: `${number}`
-    rest_total_blade: `${number}`
-    rest_month_blade: `${number}`
-    rest_total_100: `${number}`
-    rest_total_588: `${number}`
-    rest_total_1688: `${number}`
-    rest_total_5000: `${number}`
-    rest_total_10000: `${number}`
-    rest_total_100000: `${number}`
-  }
+type StrNumBoolean = '0' | '1'
+type HResponse<T = unknown> = {
+  code: `${number}`
+  tip?: string
+  data: T
+}
+type PromiseRes<T = unknown> = Promise<HResponse<T>>
+
+/**
+ * @class HBookerKit
+ */
+export interface HBookerKit {
+  // internal variables
+  _self?: SelfAccountInfo
+
+  // constructor
+  constructor: () => this
+
+  // utils
+  _decrypt: <T>(str: string) => HResponse<T>
+  ajax: AxiosInstance
+
+  // main methods
+  /**
+   * Get self user info & set current user stats
+   * @param login_name email address / phone number / booker id
+   */
+  login: (login_name: string, passwd: string) => PromiseRes<SelfAccountInfo>
+  book: (book_id: string | number) => PromiseRes<BookRoute>
 }

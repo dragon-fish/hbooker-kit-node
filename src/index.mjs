@@ -1,20 +1,33 @@
-// import 'dotenv/config'
+/**
+ * @name HBookerKit API Wrapper for 刺猬猫/HBooker Android App
+ * @author Dragon-Fish <dragon-fish@qq.com>
+ * @license MIT
+ */
 import aesjs from 'aes-js'
 import axios from 'axios'
 import { createHash } from 'crypto'
 
 export class HBookerKit {
   constructor() {
+    // Variables
     this.BASE_URL = 'https://app.hbooker.com'
     this.API_KEY = 'zG2nSeEfSHfvTCHy5LCcqtBbQehKNLXn'
     this.INTIAL_VECTOR = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+    // Init
+    this._self = {}
 
     // Alias
     this.get = this.ajax.get
     this.post = this.ajax.post
   }
 
-  decrypt(str) {
+  /****** Utils ******/
+  /**
+   * Decrypt original response data
+   * @param {string} str
+   */
+  _decrypt(str) {
     const key = createHash('sha256')
       .update(this.API_KEY, 'utf8')
       .digest()
@@ -35,21 +48,18 @@ export class HBookerKit {
         'User-Agent': 'Android com.kuangxiangciweimao.novel',
       },
       params: {
-        account: this?._user?.reader_info?.account,
-        login_token: this?._user?.login_token,
+        account: this?._self?.reader_info?.account,
+        login_token: this?._self?.login_token,
       },
     })
     client.interceptors.response.use((ctx) => {
-      ctx.data = this.decrypt(ctx.data)
+      ctx.data = this._decrypt(ctx.data)
       return ctx
     })
     return client
   }
 
-  get loginToken() {
-    return this?._user?.login_token
-  }
-
+  /****** Main methods ******/
   async login(login_name, passwd) {
     const { data } = await this.ajax.get('/signup/login', {
       params: {
@@ -57,7 +67,7 @@ export class HBookerKit {
         passwd,
       },
     })
-    this._user = data?.data
+    this._self = data?.data
     return data
   }
 
@@ -71,3 +81,5 @@ export class HBookerKit {
     ).data
   }
 }
+
+export { HBookerKit as CiweimaoKit }

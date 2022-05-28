@@ -1,13 +1,14 @@
 {
   "name": "hbooker-kit",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.1.0",
+  "description": "刺猬猫安卓应用程序 API Node.js 实现。",
   "main": "src/index.mjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Dragon-Fish <dragon-fish@qq.com>",
+  "types": "src/types/index.d.ts",
+  "license": "MIT",
   "devDependencies": {
     "@types/aes-js": "^3.1.1",
     "@types/crypto-js": "^4.1.1",
@@ -17,5 +18,18 @@
   "dependencies": {
     "aes-js": "^3.1.2",
     "axios": "^0.27.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dragon-Fish/ciweimao-kit-node.git"
+  },
+  "keywords": [
+    "api-wrapper",
+    "ciweimao",
+    "hbooker"
+  ],
+  "bugs": {
+    "url": "https://github.com/Dragon-Fish/ciweimao-kit-node/issues"
+  },
+  "homepage": "https://github.com/Dragon-Fish/ciweimao-kit-node#readme"
 }
