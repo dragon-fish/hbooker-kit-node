@@ -3,7 +3,7 @@
 Node.js API Wrapper for 刺猬猫/欢乐书客(HBooker) Android Client
 
 > Documentation is working in progress<br>
-> See also: [Samples](./sample/)
+> See also: [Samples](./samples/)
 
 ## 使用方法
 
