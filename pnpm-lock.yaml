@@ -1,7 +1,6 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@types/crypto-js': ^4.1.1
   '@types/node': ^17.0.35
   axios: ^0.27.2
   dotenv: ^16.0.1
@@ -13,16 +12,11 @@ dependencies:
   tslib: 2.4.0
 
 devDependencies:
-  '@types/crypto-js': 4.1.1
   '@types/node': 17.0.35
   dotenv: 16.0.1
   typescript: 4.7.2
 
 packages:
-
-  /@types/crypto-js/4.1.1:
-    resolution: {integrity: sha512-BG7fQKZ689HIoc5h+6D2Dgq1fABRa0RbBWKBd9SP/MVRVXROflpm5fhwyATX5duFmbStzyzyycPB8qUYKDH3NA==}
-    dev: true
 
   /@types/node/17.0.35:
     resolution: {integrity: sha512-vu1SrqBjbbZ3J6vwY17jBs8Sr/BKA+/a/WtjRG+whKg1iuLFOosq872EXS0eXWILdO36DHQQeku/ZcL6hz2fpg==}

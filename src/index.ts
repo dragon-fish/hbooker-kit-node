@@ -171,11 +171,7 @@ export class HBookerKit {
     } = await this.divisionList(book_id)
 
     for (const item of division_list) {
-      list.push(
-        ...(await (
-          await this.chapterList(item.division_id)
-        ).data.chapter_list)
-      )
+      list.push(...(await this.chapterList(item.division_id)).data.chapter_list)
     }
 
     return list
