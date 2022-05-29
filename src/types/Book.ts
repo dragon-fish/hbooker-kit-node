@@ -40,22 +40,31 @@ export interface BookInfo {
   week_fans_value: `${number}`
   month_fans_value: `${number}`
   total_fans_value: `${number}`
-  last_chapter_info: {
-    chapter_id: `${number}`
-    book_id: `${number}`
-    chapter_index: `${number}`
-    chapter_title: string
-    uptime: string
-    mtime: string
-    recommend_book_info: string
-  }
+  last_chapter_info: ChapterInfo
+  tag_list: Tag[]
 }
 
-export interface BookRoute {
+export interface BookItem {
   book_info: BookInfo
   is_inshelf: StrNumBoolean
   is_buy: StrNumBoolean
   up_reader_info: ReaderInfo
   related_list: BookInfo[]
   book_shortage_reommend_list: any[]
+}
+
+export interface ChapterInfo {
+  chapter_id: `${number}`
+  book_id: `${number}`
+  chapter_index: `${number}`
+  chapter_title: string
+  uptime: string
+  mtime: string
+  recommend_book_info: string
+}
+
+export interface Tag {
+  tag_id: `${number}`
+  tag_type: `${number}`
+  tag_name: string
 }

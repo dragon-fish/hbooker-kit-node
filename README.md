@@ -1,8 +1,9 @@
 # HBookerKit for Node
 
-刺猬猫安卓应用程序 API Node.js 实现。
+Node.js API Wrapper for 刺猬猫/欢乐书客(HBooker) Android Client
 
-> Documentation is working in progress
+> Documentation is working in progress<br>
+> See also: [Samples](./sample/)
 
 ## 使用方法
 
@@ -11,7 +12,15 @@ import { HBookerKit } from 'hbooker-kit'
 const client = new HBookerKit()
 ```
 
-### `HBookerKit.login(username: string, passwd: string)`
+### `HBookerKit.login(login_name: string, passwd: string)`
+
+...
+
+### `HBookerKit.shelfList(book_id: string | number)`
+
+...
+
+### `HBookerKit.shelf(book_id: string | number)`
 
 ...
 
