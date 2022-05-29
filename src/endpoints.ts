@@ -1,8 +1,8 @@
 /**
- * @refer https://github.com/bismarckkk/hbookerAPI/blob/1c8636dcd557bee8d0666ffaed566ce2a117a4fa/hbookerAPI/hbookerAPI.py
+ * @refer https://github.com/hang333/HbookerAppNovelDownloader/blob/906ac612df0e9ddbf3663409cc0b2c2d73a62090/HbookerAPI/UrlConstants.py#L1
  */
 export const ENDPOINTS = {
-  _BASEURL: 'https://app.hbooker.com',
+  __BASEURL: 'https://app.hbooker.com/',
   ABOUT_URL: '/setting/view_about',
   ADD_BBS_COMMENT: '/bbs/add_bbs_comment',
   ADD_BBS_COMMENT_REPLY: '/bbs/add_bbs_comment_reply',
@@ -94,7 +94,9 @@ export const ENDPOINTS = {
   GET_BOOK_ZAN: '/book/like_tag',
   GET_BOUNS_HLB: '/recharge/get_bonus_hlb',
   GET_BUY_MALLLIST: '/prop/get_prop_buy_record_list',
+  GET_CHAPTER_COMMAND: 'chapter/get_chapter_command',
   GET_CHAPTER_UPDATE: '/chapter/get_updated_chapter_by_division_id',
+  GET_CPT_IFM: '/chapter/get_cpt_ifm',
   GET_DECORATION: '/reader/get_decoration_list_by_type',
   GET_DETAIL_BOOKLISTS: '/bookcity/get_book_correlation_lists',
   GET_DIVISION_LIST: '/book/get_division_list',

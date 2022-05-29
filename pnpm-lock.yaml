@@ -1,32 +1,24 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@types/aes-js': ^3.1.1
   '@types/crypto-js': ^4.1.1
   '@types/node': ^17.0.35
-  aes-js: ^3.1.2
   axios: ^0.27.2
   dotenv: ^16.0.1
   tslib: ^2.4.0
   typescript: ^4.7.2
 
 dependencies:
-  aes-js: 3.1.2
   axios: 0.27.2
   tslib: 2.4.0
 
 devDependencies:
-  '@types/aes-js': 3.1.1
   '@types/crypto-js': 4.1.1
   '@types/node': 17.0.35
   dotenv: 16.0.1
   typescript: 4.7.2
 
 packages:
-
-  /@types/aes-js/3.1.1:
-    resolution: {integrity: sha512-SDSGgXT3LRCH6qMWk8OHT1vLSVNuHNvCpKCx2/TYtQMbMGGgxJC9fspwSkQjqzRagrWnCrxuLL3jMNXLXHHvSw==}
-    dev: true
 
   /@types/crypto-js/4.1.1:
     resolution: {integrity: sha512-BG7fQKZ689HIoc5h+6D2Dgq1fABRa0RbBWKBd9SP/MVRVXROflpm5fhwyATX5duFmbStzyzyycPB8qUYKDH3NA==}
@@ -35,10 +27,6 @@ packages:
   /@types/node/17.0.35:
     resolution: {integrity: sha512-vu1SrqBjbbZ3J6vwY17jBs8Sr/BKA+/a/WtjRG+whKg1iuLFOosq872EXS0eXWILdO36DHQQeku/ZcL6hz2fpg==}
     dev: true
-
-  /aes-js/3.1.2:
-    resolution: {integrity: sha512-e5pEa2kBnBOgR4Y/p20pskXI74UEz7de8ZGVo58asOtvSVG5YAbJeELPZxOmt+Bnz3rX753YKhfIn4X4l1PPRQ==}
-    dev: false
 
   /asynckit/0.4.0:
     resolution: {integrity: sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q==}

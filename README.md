@@ -16,14 +16,26 @@ const client = new HBookerKit()
 
 ...
 
-### `HBookerKit.shelfList(book_id: string | number)`
+### `HBookerKit.shelfList()`
 
 ...
 
-### `HBookerKit.shelf(book_id: string | number)`
+### `HBookerKit.shelf(shelf_id: string | number)`
 
 ...
 
 ### `HBookerKit.book(book_id: string | number)`
+
+...
+
+### `HBookerKit.divisionList(book_id: string | number)`
+
+...
+
+### `HBookerKit.chapterList(division_id: string | number)`
+
+...
+
+### `HBookerKit.chapter(chapter_id: string | number)`
 
 ...

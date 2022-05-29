@@ -41,7 +41,7 @@ export interface BookInfo {
   month_fans_value: `${number}`
   total_fans_value: `${number}`
   last_chapter_info: ChapterInfo
-  tag_list: Tag[]
+  tag_list: TagItem[]
 }
 
 export interface BookItem {
@@ -53,6 +53,13 @@ export interface BookItem {
   book_shortage_reommend_list: any[]
 }
 
+export interface DivisionInfo {
+  division_id: `${number}`
+  division_index: `${number}`
+  division_name: string
+  description: string
+}
+
 export interface ChapterInfo {
   chapter_id: `${number}`
   book_id: `${number}`
@@ -61,9 +68,37 @@ export interface ChapterInfo {
   uptime: string
   mtime: string
   recommend_book_info: string
+  word_count?: `${number}`
+  tsukkomi_amount?: `${number}`
+  is_paid?: StrNumBoolean
+  is_valid?: StrNumBoolean
+  auth_access?: StrNumBoolean
 }
 
-export interface Tag {
+export interface ChapterBody {
+  chapter_id: `${number}`
+  book_id: `${number}`
+  division_id: `${number}`
+  unit_hlb: `${number}`
+  chapter_index: `${number}`
+  chapter_title: string
+  author_say: string
+  word_count: `${number}`
+  discount: StrNumBoolean
+  is_paid: StrNumBoolean
+  auth_access: StrNumBoolean
+  buy_amount: StrNumBoolean
+  tsukkomi_amount: `${number}`
+  total_hlb: `${number}`
+  uptime: string
+  mtime: string
+  ctime: string
+  recommend_book_info: string
+  base_status: string
+  txt_content: string
+}
+
+export interface TagItem {
   tag_id: `${number}`
   tag_type: `${number}`
   tag_name: string
